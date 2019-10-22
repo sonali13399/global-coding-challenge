@@ -1,0 +1,29 @@
+#include "math.h"
+#include <iostream>
+using namespace std;
+
+int main()
+{
+   int a; //amount of the loan
+   double i; // the loan interest rate
+   int y; //years of the loan
+   int t = 12; //loan term in months
+   double mPayment; //variable for ouputting the payment
+
+   cout.setf(ios::fixed);
+   cout.setf(ios::showpoint);
+   cout.precision(2);
+
+   cout << "\n Enter the amount of loan in $ = ";
+   cin >> a;
+   cout << "\n Enter the interest rate = ";
+   cin >> i;
+   cout << "\n Enter years of the loan = ";
+   cin >> y;
+
+   mPayment = (a * i) / (1 - pow(1+i,-t)); //Formula to figure mortgage payment amount
+
+   cout<< "\nYour Monthly Payment Amount is: $"<< mPayment; //prints out montyly payment amount
+
+   return 0;
+}
